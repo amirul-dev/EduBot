@@ -1,0 +1,33 @@
+CLASSIFIED DOCUMENT
+Non-disclosure agreement inherently applied.
+
+EduBot currently works in Linux for Firefox browser
+
+Steps to setup the program:
+
+1) Download the EduBot.py to downloads folder
+2) Open the .py file and edit username and password at the top of the file
+2) Download webdriver:
+	download 'geckodriver-v0.30.0-linux64.tar.gz' from https://github.com/mozilla/geckodriver/releases
+	extract the file to downloads folder
+3) Copy paste the following shell commands to your terminal and run
+
+sudo mv /home/$USER/Downloads/Edu.py /home/amirul
+sudo mv /home/$USER/Downloads/geckodriver-v0.30.0-linux64/geckodriver /usr/bin
+sudo mv /home/$USER/Downloads/geckodriver /usr/bin
+pip3 install --upgrade requests
+pip install selenium
+(crontab -l ; echo "56 7,8,12,13,14,16 * * 1-5 export DISPLAY=$DISPLAY && /usr/bin/python3 EduBot.py >> EduBotLog.txt 2>&1") |  crontab -
+(crontab -l ; echo "11 10,11 * * 1-5 export DISPLAY=$DISPLAY && /usr/bin/python3 EduBot.py >> EduBotLog.txt 2>&1") |  crontab -
+
+Done!
+You can sit back and relax, your laptop will mark all attendances for you every day. 
+No timer, python script or browser running in background, CRON linux job scheduler will run the program at specific times like 7:55, 8:55, 10:11, etc. GUI has been enabled, so that you can see and be sure about your attendance.
+
+
+
+#EduBot
+#Author : amirul-dev
+
+
+
